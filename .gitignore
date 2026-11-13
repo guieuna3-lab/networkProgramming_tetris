@@ -1,0 +1,32 @@
+# 컴파일 결과물
+bin/
+out/
+target/
+build/
+*.class
+*.jar
+
+# 로그 / 임시 파일
+*.log
+*.tmp
+*.bak
+*.swp
+hs_err_pid*
+
+# VS Code: 팀 공용 설정만 공유하고 나머지 개인 설정은 제외
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# 다른 IDE
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
