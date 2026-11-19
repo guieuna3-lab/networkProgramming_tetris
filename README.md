@@ -30,9 +30,12 @@
 │   ├── ui/       Swing 기반 GUI                      (MainFrame)
 │   └── common/   서버·클라이언트 공용 코드, 프로토콜 (Protocol)
 ├── .vscode/      팀 공용 VS Code 설정 (소스 경로, 실행 구성, 추천 확장)
-├── build.bat         전체 컴파일 (결과물: bin/)
+├── .github/      PR 템플릿, PR마다 컴파일을 확인하는 GitHub Actions
+├── .gitattributes    줄바꿈 통일 규칙 (.bat은 CRLF, 나머지는 LF)
+├── build.bat         src 아래 모든 .java 컴파일 (결과물: bin/)
 ├── run-server.bat    빌드 후 서버 실행
 ├── run-client.bat    빌드 후 클라이언트 실행
+├── GITHUB_GUIDE.md   Git/GitHub 협업 가이드
 └── README.md
 ```
 
@@ -81,11 +84,14 @@ VS Code 기본 터미널(PowerShell)에서는 앞의 `.\`를 반드시 붙여야
 ### 방법 C. 직접 명령어
 
 ```
-javac -encoding UTF-8 -d bin -sourcepath src src\tetris\server\ServerMain.java src\tetris\client\ClientMain.java
+.\build.bat
 java -cp bin tetris.server.ServerMain
 java -cp bin tetris.client.ClientMain
 ```
-dd
+
+`build.bat`은 `src` 아래의 모든 `.java` 파일을 `--release 17` 옵션으로 컴파일합니다.
+JDK 17보다 높은 버전을 쓰더라도 JDK 17에 없는 문법·API를 쓰면 컴파일 오류가 나므로, 팀원 간 JDK 버전이 달라도 안전합니다.
+
 ## 6. 향후 구현할 주요 기능
 
 1. Java Swing 기반 테트리스 GUI

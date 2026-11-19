@@ -1,0 +1,17 @@
+# 줄바꿈을 저장소에서는 LF로 통일한다 (OS/설정이 달라도 불필요한 diff가 생기지 않도록).
+* text=auto
+
+*.java  text eol=lf
+*.md    text eol=lf
+*.json  text eol=lf
+*.yml   text eol=lf
+
+# Windows 배치 파일은 CRLF가 아니면 오동작할 수 있다.
+*.bat   text eol=crlf
+
+# 바이너리 (추후 추가될 이미지/사운드 리소스)
+*.png   binary
+*.jpg   binary
+*.gif   binary
+*.wav   binary
+*.jar   binary
