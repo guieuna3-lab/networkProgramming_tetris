@@ -54,6 +54,8 @@
 
 소스 경로(`src`)와 출력 경로(`bin`)는 `.vscode/settings.json`에 이미 설정되어 있습니다.
 
+Git과 GitHub 사용법, 팀 협업 규칙은 [GITHUB_GUIDE.md](GITHUB_GUIDE.md)를 참고하세요.
+
 ## 5. 서버 및 클라이언트 실행 방법
 
 서버를 먼저 실행한 뒤 클라이언트를 실행합니다. 기본 포트는 `5000`입니다.
