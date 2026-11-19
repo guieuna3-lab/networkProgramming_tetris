@@ -85,7 +85,7 @@ javac -encoding UTF-8 -d bin -sourcepath src src\tetris\server\ServerMain.java s
 java -cp bin tetris.server.ServerMain
 java -cp bin tetris.client.ClientMain
 ```
-
+dd
 ## 6. 향후 구현할 주요 기능
 
 1. Java Swing 기반 테트리스 GUI
